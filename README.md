@@ -23,6 +23,8 @@ __Available__
 
 * [prototype](./prototype.js)
 
+* [proxy](./proxy.js)
+
 * [singleton](./singleton.js)
 
 

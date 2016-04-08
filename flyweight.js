@@ -5,28 +5,27 @@ var Car = function(model, brand) {
   this.brand = brand;
 }
 
-//carFactory using the common car model/methdd
-var carFactory = (function(){
-  var existingCars = {}, esitingCar;
+//carFactory using the common car model/method
+var carFactory = (function() {
+  var existingCars = {}, existingCar;
   return {
     createCar: function(model, brand) {
       existingCar = existingCars[model];
       if (!!existingCar) {
         return existingCar;
-      } else {
-        var car = new Car(model, brand);
-        existingCars[model] = car;
-        return car;
       }
+      var car = new Car(model, brand);
+      existingCars[model] = car;
+      return car;
     }
   }
 })();
 
-//carProductionManager using the common car model/methdd
-var carProductionManager = (function(){
+//carProductionManager using the common car model/method
+var carProductionManager = (function() {
   var carDb = {};
   return {
-    addCar: function(carId, model,brand, color,carType){
+    addCar: function(carId, model, brand, color, carType){
       var car = carFactory.createCar(model, brand);
       carDb[carId] = {
           color: color,
@@ -34,7 +33,7 @@ var carProductionManager = (function(){
           car: car
       }
     },
-    repairCar: function(carId, newColor) {
+    repaintCar: function(carId, newColor) {
       var carData = carDb[carId];
       carData.color = newColor
     }
