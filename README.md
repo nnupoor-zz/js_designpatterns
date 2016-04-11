@@ -17,6 +17,8 @@ __Available__
 
 * [iterator](./iterator.js)
 
+* [mediator](./mediator.js)
+
 * [mixins](./mixins.js)
 
 * [module](./module.js)
