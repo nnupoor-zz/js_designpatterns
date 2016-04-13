@@ -35,7 +35,7 @@ __Available__
 
 * [singleton](./singleton.js)
 
-
+* [revealing module](./revealing-module.js)
 
 
 
