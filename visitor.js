@@ -26,7 +26,7 @@ var visitor = {
 };
 
 // Usage example
-var counter = new Counter;
+var counter = new Counter();
 
 counter.accept(visitor);
 console.log(counter.count); // -1
